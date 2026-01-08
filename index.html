@@ -120,18 +120,29 @@
     <div class="program-copy">
       <p class="label">Control programs</p>
       <h2>Program lineup (7 presets)</h2>
-      <p class="subtext">Charge / discharge presets with built-in guardrails. Slide through each screen to see how they’re configured.</p>
+      <p class="subtext">Charge / discharge presets with built-in guardrails. Slide the screens and click to enlarge.</p>
 
-      <div class="chip-grid">
-        <span class="chip">P1 Auto % · multi-window</span>
-        <span class="chip">P2 Demand shave</span>
-        <span class="chip">P3 Anti-export</span>
-        <span class="chip">P4 Backup reserve</span>
-        <span class="chip">P5 Manual setpoint</span>
-        <span class="chip">P6 Off-peak charge</span>
-        <span class="chip">P7 PV-priority / float</span>
+      <div class="program-columns">
+        <div class="program-col">
+          <p class="eyebrow small">Discharge (5 modes)</p>
+          <ul class="mode-list">
+            <li>AUTO: Percentage mode (%)</li>
+            <li>Auto: Target grid power (W)</li>
+            <li>MANUAL: Manual output (W)</li>
+            <li>AI: Dynamic (price/solar)</li>
+            <li>OFF: Disable output</li>
+          </ul>
+        </div>
+        <div class="program-col">
+          <p class="eyebrow small">Charge (3 modes)</p>
+          <ul class="mode-list">
+            <li>AI: Dynamic (price/solar)</li>
+            <li>TIME: Time-based charge</li>
+            <li>OFF: No charge</li>
+          </ul>
+        </div>
       </div>
-      <p class="microcopy">Each preset respects inverter limits, export rules, and time windows; safety stops remain active.</p>
+      <p class="microcopy">Each preset respects inverter limits, export rules, and time windows; safety stops stay active.</p>
     </div>
 
     <div class="program-visual lift">
