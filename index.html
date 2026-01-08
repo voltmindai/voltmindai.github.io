@@ -16,25 +16,28 @@
   <header class="nav">
     <div class="logo">VoltMind</div>
     <nav>
-      <a href="#overview">Overview</a>
-      <a href="#product">Product</a>
-      <a href="#programs">Programs</a>
-      <a href="#live">Live View</a>
-      <a href="#features">Features</a>
-      <a href="#demo">Demo</a>
-      <a href="#contact">Contact</a>
+      <a href="#overview" data-i18n="nav-overview">Overview</a>
+      <a href="#product" data-i18n="nav-product">Product</a>
+      <a href="#programs" data-i18n="nav-programs">Programs</a>
+      <a href="#live" data-i18n="nav-live">Live View</a>
+      <a href="#features" data-i18n="nav-features">Features</a>
+      <a href="#demo" data-i18n="nav-demo">Demo</a>
+      <a href="#contact" data-i18n="nav-contact">Contact</a>
     </nav>
-    <a class="btn primary" href="#contact">Book a Demo</a>
+    <div class="nav-actions">
+      <button class="btn ghost" id="lang-toggle" aria-label="Toggle language">中文</button>
+      <a class="btn primary" href="#contact" data-i18n="cta-book-demo">Book a Demo</a>
+    </div>
   </header>
 
   <section class="hero reveal" id="overview">
     <div class="hero-copy">
-      <p class="eyebrow">Grid-Aware Energy Automation</p>
-      <h1>Smarter power control for resilient sites.</h1>
-      <p class="lede">Real-time visibility, safe automation, and AI-assisted decisions that keep your energy system stable and efficient.</p>
+      <p class="eyebrow" data-i18n="hero-eyebrow">Grid-Aware Energy Automation</p>
+      <h1 data-i18n="hero-title">Smarter power control for resilient sites.</h1>
+      <p class="lede" data-i18n="hero-lede">Real-time visibility, safe automation, and AI-assisted decisions that keep your energy system stable and efficient.</p>
       <div class="hero-actions">
-        <a class="btn primary" href="#demo">View Live Demo</a>
-        <a class="btn ghost" href="#features">See Capabilities</a>
+        <a class="btn primary" href="#demo" data-i18n="btn-view-demo">View Live Demo</a>
+        <a class="btn ghost" href="#features" data-i18n="btn-see-capabilities">See Capabilities</a>
       </div>
       <div class="trust">
         <span class="dot"></span> Continuous monitoring
@@ -84,9 +87,9 @@
 
   <section class="section product reveal" id="product">
     <div class="product-copy">
-      <p class="label">VoltMind AI 5000</p>
-      <h2>Purpose-built for resilient energy sites</h2>
-      <p class="subtext">A compact controller that ships with live monitoring, safe automation, and zero-setup dashboards. Built for fast rollout and always-on reliability.</p>
+      <p class="label" data-i18n="product-label">VoltMind AI 5000</p>
+      <h2 data-i18n="product-title">Purpose-built for resilient energy sites</h2>
+      <p class="subtext" data-i18n="product-subtext-1">A compact controller that ships with live monitoring, safe automation, and zero-setup dashboards. Built for fast rollout and always-on reliability.</p>
       <div class="product-pills">
         <span class="badge">Plug-and-play</span>
         <span class="badge">Safe automation</span>
@@ -97,11 +100,11 @@
         <li>Safety-first: auto modes with hard stop protections on shutdown.</li>
         <li>Operational clarity: AI log stream plus real-time tiles for the team.</li>
       </ul>
-      <p class="subtext">Simple bring-up: plug a network cable into VoltMind AI 5000, open your assigned IP in a browser, and finish setup in minutes.</p>
-      <p class="subtext">Not seeing your device? We support custom integration. VoltMind AI works with most industrial devices via RS485 — including Schneider Electric, ABB, Siemens, Eaton, Delta, Fronius, GoodWe, Solis, Ginlong, Huawei, Growatt, Deye, SMA, Kaco, Sungrow, and more. Share your RS485 protocol guide — we’ll configure it for you.</p>
+      <p class="subtext" data-i18n="product-subtext-2">Simple bring-up: plug a network cable into VoltMind AI 5000, open your assigned IP in a browser, and finish setup in minutes.</p>
+      <p class="subtext" data-i18n="product-subtext-3">Not seeing your device? We support custom integration. VoltMind AI works with most industrial devices via RS485 — including Schneider Electric, ABB, Siemens, Eaton, Delta, Fronius, GoodWe, Solis, Ginlong, Huawei, Growatt, Deye, SMA, Kaco, Sungrow, and more. Share your RS485 protocol guide — we’ll configure it for you.</p>
       <div class="product-actions">
-        <a class="btn primary" href="#demo">View Live Demo</a>
-        <a class="btn ghost" href="#contact">Talk to sales</a>
+        <a class="btn primary" href="#demo" data-i18n="btn-view-demo">View Live Demo</a>
+        <a class="btn ghost" href="#contact" data-i18n="btn-talk-sales">Talk to sales</a>
       </div>
     </div>
     <div class="product-gallery">
@@ -118,13 +121,13 @@
 
   <section class="section programs reveal" id="programs">
     <div class="program-copy">
-      <p class="label">Control programs</p>
-      <h2>Program lineup (7 presets)</h2>
-      <p class="subtext">Charge / discharge presets with built-in guardrails. Slide the screens and click to enlarge.</p>
+      <p class="label" data-i18n="programs-label">Control programs</p>
+      <h2 data-i18n="programs-title">Program lineup (7 presets)</h2>
+      <p class="subtext" data-i18n="programs-subtext">Charge / discharge presets with built-in guardrails. Slide the screens and click to enlarge.</p>
 
       <div class="program-columns">
         <div class="program-col">
-          <p class="eyebrow small">Discharge (5 modes)</p>
+          <p class="eyebrow small" data-i18n="programs-discharge">Discharge (5 modes)</p>
           <ul class="mode-list">
             <li>AUTO: Percentage mode (%)</li>
             <li>Auto: Target grid power (W)</li>
@@ -134,7 +137,7 @@
           </ul>
         </div>
         <div class="program-col">
-          <p class="eyebrow small">Charge (3 modes)</p>
+          <p class="eyebrow small" data-i18n="programs-charge">Charge (3 modes)</p>
           <ul class="mode-list">
             <li>AI: Dynamic (price/solar)</li>
             <li>TIME: Time-based charge</li>
@@ -142,7 +145,7 @@
           </ul>
         </div>
       </div>
-      <p class="microcopy">Each preset respects inverter limits, export rules, and time windows; safety stops stay active.</p>
+      <p class="microcopy" data-i18n="programs-microcopy">Each preset respects inverter limits, export rules, and time windows; safety stops stay active.</p>
     </div>
 
     <div class="program-visual lift">
@@ -175,9 +178,9 @@
   <section class="section reveal" id="live">
     <div class="section-header">
       <div>
-        <p class="label">Live View</p>
-        <h2>Operational status at a glance</h2>
-        <p class="subtext">A live snapshot keeps your team aligned on what the system is doing right now.</p>
+      <p class="label" data-i18n="live-label">Live View</p>
+      <h2 data-i18n="live-title">Operational status at a glance</h2>
+      <p class="subtext" data-i18n="live-subtext">A live snapshot keeps your team aligned on what the system is doing right now.</p>
       </div>
       <a class="btn ghost" href="#demo">Open Demo</a>
     </div>
@@ -206,41 +209,41 @@
   </section>
 
   <section class="section reveal" id="features">
-    <p class="label">Capabilities</p>
-    <h2>Built for reliable, safe energy control</h2>
+    <p class="label" data-i18n="features-label">Capabilities</p>
+    <h2 data-i18n="features-title">Built for reliable, safe energy control</h2>
     <div class="feature-grid">
       <div>
-        <h4>Live dashboards</h4>
-        <p>Curated panels for power, energy, and device health with no manual setup.</p>
+        <h4 data-i18n="feat-1-title">Live dashboards</h4>
+        <p data-i18n="feat-1-body">Curated panels for power, energy, and device health with no manual setup.</p>
       </div>
       <div>
-        <h4>Auto control with safety</h4>
-        <p>Adjusts power automatically while respecting export limits and device constraints.</p>
+        <h4 data-i18n="feat-2-title">Auto control with safety</h4>
+        <p data-i18n="feat-2-body">Adjusts power automatically while respecting export limits and device constraints.</p>
       </div>
       <div>
-        <h4>Alerts & logging</h4>
-        <p>AI log stream plus guardrail alerts for fast incident response.</p>
+        <h4 data-i18n="feat-3-title">Alerts & logging</h4>
+        <p data-i18n="feat-3-body">AI log stream plus guardrail alerts for fast incident response.</p>
       </div>
       <div>
-        <h4>Map & multi-device</h4>
-        <p>Site-aware views with flexible device groups and persistent map settings.</p>
+        <h4 data-i18n="feat-4-title">Map & multi-device</h4>
+        <p data-i18n="feat-4-body">Site-aware views with flexible device groups and persistent map settings.</p>
       </div>
       <div>
-        <h4>Fast rollout</h4>
-        <p>Provisioning scripts that ship dashboards, datasources, and runtime config.</p>
+        <h4 data-i18n="feat-5-title">Fast rollout</h4>
+        <p data-i18n="feat-5-body">Provisioning scripts that ship dashboards, datasources, and runtime config.</p>
       </div>
       <div>
-        <h4>Secure by design</h4>
-        <p>Least-privilege tokens for data, no control exposed on public pages.</p>
+        <h4 data-i18n="feat-6-title">Secure by design</h4>
+        <p data-i18n="feat-6-body">Least-privilege tokens for data, no control exposed on public pages.</p>
       </div>
     </div>
   </section>
 
   <section class="section demo reveal" id="demo">
     <div class="demo-copy">
-      <p class="label">Live Demo</p>
-      <h2>See it in action</h2>
-      <p class="subtext">Watch a live walk-through of the dashboards, automation flows, and safety controls.</p>
+      <p class="label" data-i18n="demo-label">Live Demo</p>
+      <h2 data-i18n="demo-title">See it in action</h2>
+      <p class="subtext" data-i18n="demo-subtext">Watch a live walk-through of the dashboards, automation flows, and safety controls.</p>
       <div class="badges">
         <span class="badge">AI logging</span>
         <span class="badge">Auto mode</span>
@@ -260,20 +263,20 @@
 
   <section class="section cta reveal" id="contact">
     <div>
-      <p class="label">Get started</p>
-      <h2>Ready to explore VoltMind?</h2>
-      <p class="subtext">Book a live session and we’ll tailor a walkthrough for your site.</p>
+      <p class="label" data-i18n="cta-label">Get started</p>
+      <h2 data-i18n="cta-title">Ready to explore VoltMind?</h2>
+      <p class="subtext" data-i18n="cta-subtext">Book a live session and we’ll tailor a walkthrough for your site.</p>
     </div>
     <div class="cta-actions">
-      <a class="btn primary" href="mailto:sales@example.com">Book a Session</a>
-      <a class="btn ghost" href="https://cal.com" target="_blank" rel="noreferrer">Schedule online</a>
+      <a class="btn primary" href="mailto:sales@example.com" data-i18n="cta-btn-session">Book a Session</a>
+      <a class="btn ghost" href="https://cal.com" target="_blank" rel="noreferrer" data-i18n="cta-btn-schedule">Schedule online</a>
     </div>
   </section>
 
   <footer class="footer">
     <div class="logo">VoltMind</div>
-    <p>Reliable energy automation for modern sites.</p>
-    <p class="footnote">Demo view is read-only. Control actions are disabled in this experience.</p>
+    <p data-i18n="footer-body">Reliable energy automation for modern sites.</p>
+    <p class="footnote" data-i18n="footer-note">Demo view is read-only. Control actions are disabled in this experience.</p>
   </footer>
 
   <script src="js/main.js"></script>
