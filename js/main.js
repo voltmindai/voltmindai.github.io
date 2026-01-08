@@ -199,6 +199,7 @@ function initProgramSlider() {
   slides.forEach(slide => {
     const img = slide.querySelector("img");
     img.addEventListener("click", () => openLightbox(img.src, img.alt));
+    img.dataset.lightbox = "program";
   });
   if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
   if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
@@ -210,12 +211,13 @@ function initProductLightbox() {
   const lightboxBackdrop = document.getElementById("lightbox-backdrop");
   const lightboxClose = document.querySelector(".lightbox-close");
   if (!lightbox || !lightboxImg) return;
-  document.querySelectorAll(".product-stage img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt || "Product view";
-      lightbox.classList.add("show");
-    });
+  const open = img => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || "View";
+    lightbox.classList.add("show");
+  };
+  document.querySelectorAll("[data-lightbox]").forEach(img => {
+    img.addEventListener("click", () => open(img));
   });
   const closeFn = () => lightbox.classList.remove("show");
   if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeFn);
@@ -348,6 +350,7 @@ function initI18n() {
   }
 
   let current = "en";
+  setLang(current);
   toggle.addEventListener("click", () => {
     current = current === "en" ? "zh" : "en";
     setLang(current);
@@ -362,4 +365,10 @@ window.addEventListener("DOMContentLoaded", () => {
   initProgramSlider();
   initProductLightbox();
   initI18n();
+});
+
+// Fallback: rerun init after load in case DOMContentLoaded was late
+window.addEventListener("load", () => {
+  initProgramSlider();
+  initProductLightbox();
 });
