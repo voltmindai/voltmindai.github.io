@@ -4,184 +4,167 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VoltMind AI - Intelligent Edge Controller for Industrial Energy</title>
-  <style>
-    :root {
-      --primary: #3b82f6;
-      --secondary: #60a5fa;
-      --dark: #0f172a;
-      --light: #e2e8f0;
-      --accent: #ef4444;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--light);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    .logo {
-      width: 60px;
-      height: 60px;
-      background: white;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem;
-    }
-    .logo span {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: var(--primary);
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-    }
-    p.subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .feature-card {
-      background: #1e293b;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-    .feature-card h3 {
-      color: var(--secondary);
-      margin-top: 0;
-    }
-    .feature-card ul {
-      padding-left: 1.5rem;
-    }
-    .cta {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0.5rem;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: var(--secondary);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #64748b;
-      border-top: 1px solid #334155;
-    }
-    .lang-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: #1e293b;
-      border: 1px solid #334155;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .features {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/voltmind.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!-- JS for modals & language toggle -->
+  <script src="assets/js/main.js"></script>
 </head>
 <body>
+  <!-- Language Toggle -->
   <div class="lang-toggle" onclick="switchLang('zh')">🇨🇳 中文</div>
 
+  <!-- Header -->
   <header>
-    <div class="logo"><span>V</span></div>
+    <img src="assets/images/voltmind-logo.svg" alt="VoltMind AI" width="60" height="60" style="border-radius: 12px; margin: 0 auto 1rem; display: block;">
     <h1>VoltMind AI</h1>
     <p class="subtitle">Intelligent Edge Controller for Industrial Energy & Demand Response</p>
   </header>
 
+  <!-- Navigation -->
+  <nav style="background: #1e293b; padding: 0.5rem 1rem; border-bottom: 1px solid #334155;">
+    <a href="#" style="margin-right: 1.5rem; color: #60a5fa; text-decoration: none; font-weight: 500;">Home</a>
+    <a href="#training" style="margin-right: 1.5rem; color: #94a3b8; text-decoration: none;">Training & Support</a>
+    <a href="#contact" style="margin-right: 1.5rem; color: #94a3b8; text-decoration: none;">Contact Us</a>
+  </nav>
+
+  <!-- Feature Cards -->
   <div class="features">
     <div class="feature-card">
-      <h3>🔧 Multi-Brand Device Support</h3>
-      <ul>
-        <li>Compatible with Growatt, Deye, Huawei inverters</li>
-        <li>Supports DTS636 meters</li>
-        <li>Auto-detects device protocols — no manual setup</li>
-      </ul>
+      <a href="#modal-multi-brand" style="text-decoration: none; color: inherit; display: block;">
+        <h3>🔧 Multi-Brand Device Support</h3>
+        <ul>
+          <li>Compatible with Growatt, Deye, Huawei inverters</li>
+          <li>Supports DTS636 meters</li>
+          <li>Auto-detects device protocols — no manual setup</li>
+        </ul>
+      </a>
     </div>
+
     <div class="feature-card">
-      <h3>⚡ Smart Demand Response</h3>
-      <ul>
-        <li>Automatically charges during off-peak hours</li>
-        <li>Discharges during peak demand to reduce costs</li>
-        <li>Safety rules protect battery health</li>
-      </ul>
+      <a href="#modal-demand-response" style="text-decoration: none; color: inherit; display: block;">
+        <h3>⚡ Smart Demand Response</h3>
+        <ul>
+          <li>Automatically charges during off-peak hours</li>
+          <li>Discharges during peak demand to reduce costs</li>
+          <li>Safety rules protect battery health</li>
+        </ul>
+      </a>
     </div>
+
     <div class="feature-card">
-      <h3>🌐 Secure Remote Access</h3>
-      <ul>
-        <li>Access your system from anywhere</li>
-        <li>No public IP required — secure by default</li>
-        <li>Manage 1000+ sites from one dashboard</li>
-      </ul>
+      <a href="#modal-remote-access" style="text-decoration: none; color: inherit; display: block;">
+        <h3>🌐 Secure Remote Access</h3>
+        <ul>
+          <li>Access your system from anywhere</li>
+          <li>No public IP required — secure by default</li>
+          <li>Manage 1000+ sites from one dashboard</li>
+        </ul>
+      </a>
     </div>
+
     <div class="feature-card">
-      <h3>📦 Easy Deployment</h3>
-      <ul>
-        <li>Plug-and-play hardware — ready in minutes</li>
-        <li>Configurable via web UI — no coding needed</li>
-        <li>Offline-capable — works without internet</li>
-      </ul>
+      <a href="#modal-easy-deployment" style="text-decoration: none; color: inherit; display: block;">
+        <h3>📦 Easy Deployment</h3>
+        <ul>
+          <li>Plug-and-play hardware — ready in minutes</li>
+          <li>Configurable via web UI — no coding needed</li>
+          <li>Offline-capable — works without internet</li>
+        </ul>
+      </a>
     </div>
   </div>
 
-  <div class="cta">
-    <h2>Experience VoltMind AI</h2>
-    <p>Watch our demo video or schedule a live demo</p>
-    <a href="#video" class="btn">Watch Demo Video</a>
-    <a href="mailto:founder@voltmindai.com" class="btn">Contact Sales</a>
+  <!-- Training & Support Section -->
+  <div id="training" style="padding: 2rem; text-align: center;">
+    <h2>📚 Training & Support</h2>
+    <p>Get started with VoltMind AI in minutes</p>
+
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+      <div style="text-align: left; max-width: 300px;">
+        <h3>🎥 Watch Our Setup Guide</h3>
+        <video width="100%" controls style="margin-top: 1rem;">
+          <source src="assets/videos/setup-guide.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p style="margin-top: 1rem;">* Set up your device in 5 minutes</p>
+      </div>
+
+      <div style="text-align: left; max-width: 300px;">
+        <h3>📄 Download User Manual</h3>
+        <a href="assets/pdfs/user-manual.pdf" download class="btn" style="margin-top: 1rem; display: block;">
+          Download PDF Manual
+        </a>
+        <p style="margin-top: 1rem;">Covers all features and troubleshooting</p>
+      </div>
+
+      <div style="text-align: left; max-width: 300px;">
+        <h3>🔧 Web-Based Setup Wizard</h3>
+        <a href="templates/support_quick_start.html" class="btn" style="margin-top: 1rem; display: block;">
+          Start Setup Wizard
+        </a>
+        <p style="margin-top: 1rem;">Guided interface — no technical background needed</p>
+      </div>
+    </div>
   </div>
 
-  <div id="video" style="padding: 2rem; text-align: center;">
-    <h2>Demo Video</h2>
-    <video width="100%" controls>
-      <source src="https://yourdomain.com/assets/videos/demo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <p style="margin-top: 1rem;">* Video is for demonstration purposes — actual system supports more features</p>
+  <!-- Contact Us Section -->
+  <div id="contact" style="padding: 2rem; text-align: center;">
+    <h2>📬 Contact Us</h2>
+    <p>For sales, support, or partnership inquiries</p>
+    <a href="mailto:founder@voltmindai.com" class="btn">Email Us</a>
+    <a href="https://weixin.qq.com" class="btn">WeChat</a>
   </div>
 
+  <!-- Footer -->
   <footer>
     © 2025 VoltMind AI. All rights reserved. | Made in Hong Kong
   </footer>
 
-  <script>
-    function switchLang(lang) {
-      if (lang === 'zh') {
-        window.location.href = 'index_zh.html';
-      }
-    }
-  </script>
-</body>
-</html>
+  <!-- Modals -->
+  <div id="modal-multi-brand" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; overflow-y: auto; padding: 2rem;">
+    <div style="background: #1e293b; border-radius: 12px; padding: 2rem; max-width: 800px; margin: 2rem auto; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+      <h2>🔧 Multi-Brand Device Support</h2>
+      <p>VoltMind AI supports multiple inverter and meter brands out of the box:</p>
+      <ul>
+        <li><strong>Growatt</strong>: Tested with MTL-5000 series — automatic register map detection.</li>
+        <li><strong>Deye</strong>: Compatible with SUN-8K — supports both holding and input registers.</li>
+        <li><strong>Huawei</strong>: Limited support — requires FusionSolar API key for full functionality.</li>
+        <li><strong>DTS636 Meter</strong>: Reads real-time power, voltage, current, and energy consumption.</li>
+      </ul>
+      <p>All devices are configured via the web UI — no manual editing of JSON files needed.</p>
+      <button onclick="closeModal('modal-multi-brand')" class="btn" style="margin-top: 1rem;">Close</button>
+    </div>
+  </div>
+
+  <div id="modal-demand-response" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; overflow-y: auto; padding: 2rem;">
+    <div style="background: #1e293b; border-radius: 12px; padding: 2rem; max-width: 800px; margin: 2rem auto; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+      <h2>⚡ Smart Demand Response</h2>
+      <p>VoltMind AI automates energy management based on your settings:</p>
+      <ul>
+        <li><strong>Peak Discharge Mode</strong>: Discharges during high-price hours (e.g., 10:00–14:00, 18:00–22:00).</li>
+        <li><strong>AI Dynamic Mode</strong>: Uses electricity price + weather forecast to decide when to charge/discharge.</li>
+        <li><strong>Safety Rules</strong>: Never discharges below 20% SOC — protects battery life.</li>
+      </ul>
+      <p>You can also set manual limits — e.g., max discharge power = 50kW.</p>
+      <button onclick="closeModal('modal-demand-response')" class="btn" style="margin-top: 1rem;">Close</button>
+    </div>
+  </div>
+
+  <div id="modal-remote-access" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; overflow-y: auto; padding: 2rem;">
+    <div style="background: #1e293b; border-radius: 12px; padding: 2rem; max-width: 800px; margin: 2rem auto; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+      <h2>🌐 Secure Remote Access</h2>
+      <p>Access your system from anywhere — no open ports, no public IP required:</p>
+      <ul>
+        <li>Uses encrypted, zero-config remote access.</li>
+        <li>Each unit has a unique hostname — easy to locate and manage.</li>
+        <li>Supports role-based access — e.g., viewer, operator, admin.</li>
+      </ul>
+      <p>Perfect for ESCOs managing 100+ sites — all visible in one dashboard.</p>
+      <button onclick="closeModal('modal-remote-access')" class="btn" style="margin-top: 1rem;">Close</button>
+    </div>
+  </div>
+
+  <div id="modal-easy-deployment" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; overflow-y: auto; padding: 2rem;">
+    <div style="background: #1e293b; border-radius: 12px; padding: 2rem; max-width: 8
