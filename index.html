@@ -1,117 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VoltMind AI — Intelligent Energy for the Distributed Grid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltMind AI - Intelligent Edge Controller for Industrial Energy</title>
   <style>
+    :root {
+      --primary: #3b82f6;
+      --secondary: #60a5fa;
+      --dark: #0f172a;
+      --light: #e2e8f0;
+      --accent: #ef4444;
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--light);
       margin: 0;
       padding: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
+      line-height: 1.6;
     }
     header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 2rem 1rem;
       text-align: center;
-      margin-bottom: 3rem;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .logo span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--primary);
     }
     h1 {
       font-size: 2.5rem;
-      font-weight: 700;
-      margin: 0;
-      background: linear-gradient(90deg, #60a5fa, #3b82f6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      margin: 0.5rem 0;
     }
-    .subtitle {
+    p.subtitle {
       font-size: 1.2rem;
-      color: #94a3b8;
-      margin-top: 0.5rem;
+      opacity: 0.9;
     }
-    .content {
-      background: #1e293b;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
       padding: 2rem;
+    }
+    .feature-card {
+      background: #1e293b;
       border-radius: 12px;
+      padding: 1.5rem;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
-    h2 {
-      color: #93c5fd;
+    .feature-card h3 {
+      color: var(--secondary);
       margin-top: 0;
     }
-    p {
-      margin: 1rem 0;
-    }
-    .highlight {
-      color: #60a5fa;
-      font-weight: 600;
+    .feature-card ul {
+      padding-left: 1.5rem;
     }
     .cta {
       text-align: center;
-      margin-top: 2rem;
+      padding: 3rem 1rem;
     }
     .btn {
       display: inline-block;
-      background: #3b82f6;
+      background: var(--primary);
       color: white;
       padding: 0.75rem 1.5rem;
-      text-decoration: none;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: 600;
+      margin: 0.5rem;
       transition: background 0.3s;
     }
     .btn:hover {
-      background: #2563eb;
+      background: var(--secondary);
     }
     footer {
       text-align: center;
-      margin-top: 3rem;
-      color: #64748b;
+      padding: 1rem;
       font-size: 0.9rem;
+      color: #64748b;
+      border-top: 1px solid #334155;
     }
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
+    .lang-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .features {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>VoltMind AI</h1>
-      <div class="subtitle">Open Architecture for Multi-Brand Virtual Power Plants</div>
-    </header>
+  <div class="lang-toggle" onclick="switchLang('zh')">🇨🇳 中文</div>
 
-    <div class="content">
-      <h2>Intelligent Edge Control for Distributed Energy</h2>
-      <p>
-        VoltMind AI is an <span class="highlight">edge-native platform</span> that enables industrial & commercial sites to:
-      </p>
+  <header>
+    <div class="logo"><span>V</span></div>
+    <h1>VoltMind AI</h1>
+    <p class="subtitle">Intelligent Edge Controller for Industrial Energy & Demand Response</p>
+  </header>
+
+  <div class="features">
+    <div class="feature-card">
+      <h3>🔧 Multi-Brand Device Support</h3>
       <ul>
-        <li>Integrate <span class="highlight">multi-brand inverters</span> (Growatt, Deye, Huawei) and meters (DTS636)</li>
-        <li>Participate in <span class="highlight">Guangdong Demand Response</span> programs automatically</li>
-        <li>Optimize charging/discharging using <span class="highlight">real-time electricity pricing</span></li>
-        <li>Maintain <span class="highlight">full client control</span> with configurable safety rules</li>
+        <li>Compatible with Growatt, Deye, Huawei inverters</li>
+        <li>Supports DTS636 meters</li>
+        <li>Auto-detects device protocols — no manual setup</li>
       </ul>
-
-      <p>
-        Built for <span class="highlight">system integrators and ESCOs</span> who need a secure, scalable, and vendor-agnostic VPP edge solution.
-      </p>
-
-      <div class="cta">
-        <a href="mailto:founder@voltmind.ai" class="btn">Request a Private Demo</a>
-      </div>
     </div>
-
-    <footer>
-      &copy; 2025 VoltMind AI. All rights reserved.
-    </footer>
+    <div class="feature-card">
+      <h3>⚡ Smart Demand Response</h3>
+      <ul>
+        <li>Automatically charges during off-peak hours</li>
+        <li>Discharges during peak demand to reduce costs</li>
+        <li>Safety rules protect battery health</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <h3>🌐 Secure Remote Access</h3>
+      <ul>
+        <li>Access your system from anywhere</li>
+        <li>No public IP required — secure by default</li>
+        <li>Manage 1000+ sites from one dashboard</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <h3>📦 Easy Deployment</h3>
+      <ul>
+        <li>Plug-and-play hardware — ready in minutes</li>
+        <li>Configurable via web UI — no coding needed</li>
+        <li>Offline-capable — works without internet</li>
+      </ul>
+    </div>
   </div>
+
+  <div class="cta">
+    <h2>Experience VoltMind AI</h2>
+    <p>Watch our demo video or schedule a live demo</p>
+    <a href="#video" class="btn">Watch Demo Video</a>
+    <a href="mailto:founder@voltmindai.com" class="btn">Contact Sales</a>
+  </div>
+
+  <div id="video" style="padding: 2rem; text-align: center;">
+    <h2>Demo Video</h2>
+    <video width="100%" controls>
+      <source src="https://yourdomain.com/assets/videos/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p style="margin-top: 1rem;">* Video is for demonstration purposes — actual system supports more features</p>
+  </div>
+
+  <footer>
+    © 2025 VoltMind AI. All rights reserved. | Made in Hong Kong
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      if (lang === 'zh') {
+        window.location.href = 'index_zh.html';
+      }
+    }
+  </script>
 </body>
 </html>
