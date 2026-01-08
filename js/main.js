@@ -413,8 +413,17 @@ function initModeModal() {
     modal.classList.remove("show");
   }
 
+  // direct binding
   document.querySelectorAll(".mode-link").forEach(btn => {
     btn.addEventListener("click", () => open(btn.dataset.mode));
+  });
+  // delegated fallback (handles future DOM updates)
+  document.addEventListener("click", e => {
+    const target = e.target.closest(".mode-link");
+    if (target && target.dataset.mode) {
+      e.preventDefault();
+      open(target.dataset.mode);
+    }
   });
 
   if (backdrop) backdrop.addEventListener("click", close);
