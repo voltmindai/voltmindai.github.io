@@ -80,12 +80,12 @@ function animateLive() {
 
 function updateTiles(latest) {
   const fmt = v => `${v.toFixed(2)} kW`;
-  document.getElementById("stat-inverter").textContent = fmt(latest.inverter);
-  document.getElementById("stat-grid").textContent = fmt(Math.abs(latest.grid));
-  document.getElementById("stat-load").textContent = fmt(latest.load);
+  animateNumber(document.getElementById("stat-inverter"), latest.inverter, " kW");
+  animateNumber(document.getElementById("stat-grid"), Math.abs(latest.grid), " kW");
+  animateNumber(document.getElementById("stat-load"), latest.load, " kW");
 
-  document.getElementById("tile-inverter").textContent = fmt(latest.inverter);
-  document.getElementById("tile-grid").textContent = fmt(Math.abs(latest.grid));
+  animateNumber(document.getElementById("tile-inverter"), latest.inverter, " kW");
+  animateNumber(document.getElementById("tile-grid"), Math.abs(latest.grid), " kW");
   document.getElementById("tile-load-note")?.remove(); // not used; kept for layout fallback
   document.getElementById("tile-breaker").textContent = latest.breakerClosed ? "Closed" : "Open";
   document.getElementById("tile-breaker-note").textContent = latest.breakerClosed ? "Normal operation" : "Awaiting close";
@@ -105,8 +105,45 @@ function renderQuickStats() {
   });
 }
 
+function animateNumber(el, target, suffix = "", duration = 600) {
+  if (!el) return;
+  const start = parseFloat(el.dataset.prev || "0");
+  const diff = target - start;
+  const startTime = performance.now();
+  function step(now) {
+    const t = Math.min(1, (now - startTime) / duration);
+    const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // ease in-out
+    const val = start + diff * eased;
+    el.textContent = `${val.toFixed(2)}${suffix}`;
+    if (t < 1) requestAnimationFrame(step);
+    else {
+      el.dataset.prev = target.toFixed(2);
+      el.classList.add("glow");
+      setTimeout(() => el.classList.remove("glow"), 400);
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function setupReveal() {
+  const items = document.querySelectorAll(".reveal");
+  const obs = new IntersectionObserver(
+    entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          obs.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  items.forEach(el => obs.observe(el));
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   initSampleData();
   renderQuickStats();
   animateLive();
+  setupReveal();
 });
