@@ -97,6 +97,7 @@
         <li>Safety-first: auto modes with hard stop protections on shutdown.</li>
         <li>Operational clarity: AI log stream plus real-time tiles for the team.</li>
       </ul>
+      <p class="subtext">Not seeing your device? We support custom integration. VoltMind AI works with most industrial devices via RS485 — including Schneider Electric, ABB, Siemens, Eaton, Delta, Fronius, GoodWe, Solis, Ginlong, Huawei, Growatt, Deye, SMA, Kaco, Sungrow, and more. Share your RS485 protocol guide — we’ll configure it for you.</p>
       <div class="product-actions">
         <a class="btn primary" href="#demo">View Live Demo</a>
         <a class="btn ghost" href="#contact">Talk to sales</a>
@@ -117,56 +118,37 @@
   <section class="section programs reveal" id="programs">
     <div class="program-copy">
       <p class="label">Control programs</p>
-      <h2>Eight modes, tuned for real-world operation</h2>
-      <p class="subtext">Guardrailed charge / discharge programs with short, clear intent. Auto modes honor limits, schedules, and safety stops.</p>
+      <h2>Program lineup (7 presets)</h2>
+      <p class="subtext">Charge / discharge presets with built-in guardrails. Slide through each screen to see how they’re configured.</p>
 
-      <div class="mode-group">
-        <p class="eyebrow small">Discharge (5 modes)</p>
-        <div class="mode-grid">
-          <div class="mode-card lift">
-            <span class="mode-tag">Auto % (multi-window)</span>
-            <p>Multiple windows, different targets; AI stays inside export / inverter limits.</p>
-          </div>
-          <div class="mode-card lift">
-            <span class="mode-tag">Demand shave</span>
-            <p>Hold to a site cap; pre-emptively back off before hitting limits.</p>
-          </div>
-          <div class="mode-card lift">
-            <span class="mode-tag">Anti-export</span>
-            <p>Zero-export guard; offset load without pushing to grid.</p>
-          </div>
-          <div class="mode-card lift">
-            <span class="mode-tag">Backup</span>
-            <p>Keep reserve and bound discharge for critical loads.</p>
-          </div>
-          <div class="mode-card lift">
-            <span class="mode-tag">Manual setpoint</span>
-            <p>Operator-set watts with guardrails; quick, safe tweaks.</p>
-          </div>
-        </div>
+      <div class="chip-grid">
+        <span class="chip">P1 Auto % · multi-window</span>
+        <span class="chip">P2 Demand shave</span>
+        <span class="chip">P3 Anti-export</span>
+        <span class="chip">P4 Backup reserve</span>
+        <span class="chip">P5 Manual setpoint</span>
+        <span class="chip">P6 Off-peak charge</span>
+        <span class="chip">P7 PV-priority / float</span>
       </div>
-
-      <div class="mode-group">
-        <p class="eyebrow small">Charge (3 modes)</p>
-        <div class="mode-grid">
-          <div class="mode-card lift">
-            <span class="mode-tag">Off-peak charge</span>
-            <p>Charge in low-tariff windows; stop at target or window end.</p>
-          </div>
-          <div class="mode-card lift">
-            <span class="mode-tag">PV-priority</span>
-            <p>Use surplus PV; throttle when site load rises.</p>
-          </div>
-          <div class="mode-card lift">
-            <span class="mode-tag">Maintenance/float</span>
-            <p>Gentle float band with soft ramps for battery care.</p>
-          </div>
-        </div>
-      </div>
+      <p class="microcopy">Each preset respects inverter limits, export rules, and time windows; safety stops remain active.</p>
     </div>
+
     <div class="program-visual lift">
-      <span class="tag">Program map</span>
-      <img src="jpg/program-001.png" alt="VoltMind program overview">
+      <span class="tag">Program screens</span>
+      <div class="slider" id="program-slider">
+        <button class="slider-btn prev" aria-label="Previous program">&larr;</button>
+        <div class="slider-track">
+          <div class="slide active"><img src="jpg/program-001.png" alt="Program 1 screen"></div>
+          <div class="slide"><img src="jpg/program-002.png" alt="Program 2 screen"></div>
+          <div class="slide"><img src="jpg/program-003.png" alt="Program 3 screen"></div>
+          <div class="slide"><img src="jpg/program-004.png" alt="Program 4 screen"></div>
+          <div class="slide"><img src="jpg/program-005.png" alt="Program 5 screen"></div>
+          <div class="slide"><img src="jpg/program-006.png" alt="Program 6 screen"></div>
+          <div class="slide"><img src="jpg/program-007.png" alt="Program 7 screen"></div>
+        </div>
+        <button class="slider-btn next" aria-label="Next program">&rarr;</button>
+      </div>
+      <div class="slider-dots" id="program-dots"></div>
     </div>
   </section>
 
