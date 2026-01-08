@@ -16,7 +16,10 @@
   <header class="nav">
     <div class="brand">
       <img src="static/voltmind-logo.svg" alt="VoltMind logo" class="brand-mark">
-      <span class="logo">VoltMind</span>
+      <div class="brand-text">
+        <span class="logo">VoltMind AI</span>
+        <span class="brand-sub" data-i18n="brand-sub">Energy Monitoring & Control</span>
+      </div>
     </div>
     <nav>
       <a href="#overview" data-i18n="nav-overview">Overview</a>
@@ -132,19 +135,19 @@
         <div class="program-col">
           <p class="eyebrow small" data-i18n="programs-discharge">Discharge (5 modes)</p>
           <ul class="mode-list">
-            <li>AUTO: Percentage mode (%)</li>
-            <li>Auto: Target grid power (W)</li>
-            <li>MANUAL: Manual output (W)</li>
-            <li>AI: Dynamic (price/solar)</li>
-            <li>OFF: Disable output</li>
+            <li><button class="mode-link" data-mode="auto-percent">AUTO: Percentage mode (%)</button></li>
+            <li><button class="mode-link" data-mode="target-grid">Auto: Target grid power (W)</button></li>
+            <li><button class="mode-link" data-mode="manual">MANUAL: Manual output (W)</button></li>
+            <li><button class="mode-link" data-mode="ai-dynamic">AI: Dynamic (price/solar)</button></li>
+            <li><button class="mode-link" data-mode="off-discharge">OFF: Disable output</button></li>
           </ul>
         </div>
         <div class="program-col">
           <p class="eyebrow small" data-i18n="programs-charge">Charge (3 modes)</p>
           <ul class="mode-list">
-            <li>AI: Dynamic (price/solar)</li>
-            <li>TIME: Time-based charge</li>
-            <li>OFF: No charge</li>
+            <li><button class="mode-link" data-mode="ai-charge">AI: Dynamic (price/solar)</button></li>
+            <li><button class="mode-link" data-mode="time-charge">TIME: Time-based charge</button></li>
+            <li><button class="mode-link" data-mode="off-charge">OFF: No charge</button></li>
           </ul>
         </div>
       </div>
@@ -175,6 +178,15 @@
     <div class="lightbox-content">
       <button class="lightbox-close" aria-label="Close">&times;</button>
       <img id="lightbox-img" alt="Program detail">
+    </div>
+  </div>
+
+  <div class="modal" id="mode-modal">
+    <div class="modal-backdrop" id="mode-modal-backdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h3 id="mode-modal-title"></h3>
+      <p id="mode-modal-body"></p>
     </div>
   </div>
 

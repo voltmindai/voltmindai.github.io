@@ -229,6 +229,7 @@ function initI18n() {
   if (!toggle) return;
   const dict = {
     en: {
+      "brand-sub": "Energy Monitoring & Control",
       "nav-overview": "Overview",
       "nav-product": "Product",
       "nav-programs": "Programs",
@@ -283,6 +284,7 @@ function initI18n() {
       "footer-note": "Demo view is read-only. Control actions are disabled in this experience."
     },
     zh: {
+      "brand-sub": "能源監測與控制",
       "nav-overview": "總覽",
       "nav-product": "產品",
       "nav-programs": "控制方案",
@@ -357,6 +359,68 @@ function initI18n() {
   });
 }
 
+function initModeModal() {
+  const modal = document.getElementById("mode-modal");
+  const backdrop = document.getElementById("mode-modal-backdrop");
+  const closeBtn = document.querySelector(".modal-close");
+  const titleEl = document.getElementById("mode-modal-title");
+  const bodyEl = document.getElementById("mode-modal-body");
+  if (!modal || !titleEl || !bodyEl) return;
+
+  const info = {
+    "auto-percent": {
+      title: "AUTO: Percentage mode (%)",
+      body: "Hold inverter output to a target percentage with safety limits; respects export caps and inverter constraints."
+    },
+    "target-grid": {
+      title: "Auto: Target grid power (W)",
+      body: "Aim for a specific grid import/export power; offsets load to stay near the watt setpoint while honoring limits."
+    },
+    "manual": {
+      title: "MANUAL: Manual output (W)",
+      body: "Operator-set watt command with guardrails; sends immediate output while staying within safe bounds."
+    },
+    "ai-dynamic": {
+      title: "AI: Dynamic (price/solar)",
+      body: "Adapts output based on price/solar signals; throttles within inverter/export limits and time windows."
+    },
+    "off-discharge": {
+      title: "OFF: Disable output",
+      body: "Forces discharge to 0 W and holds; safety stops remain active."
+    },
+    "ai-charge": {
+      title: "AI: Dynamic (price/solar) – charge",
+      body: "Charges when price/solar favorable; backs off when conditions degrade to avoid import spikes."
+    },
+    "time-charge": {
+      title: "TIME: Time-based charge",
+      body: "Charges only in scheduled windows; stops at window end or target."
+    },
+    "off-charge": {
+      title: "OFF: No charge",
+      body: "Disables charge; keeps safety protections active."
+    }
+  };
+
+  function open(key) {
+    const item = info[key];
+    if (!item) return;
+    titleEl.textContent = item.title;
+    bodyEl.textContent = item.body;
+    modal.classList.add("show");
+  }
+  function close() {
+    modal.classList.remove("show");
+  }
+
+  document.querySelectorAll(".mode-link").forEach(btn => {
+    btn.addEventListener("click", () => open(btn.dataset.mode));
+  });
+
+  if (backdrop) backdrop.addEventListener("click", close);
+  if (closeBtn) closeBtn.addEventListener("click", close);
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   initSampleData();
   renderQuickStats();
@@ -365,10 +429,12 @@ window.addEventListener("DOMContentLoaded", () => {
   initProgramSlider();
   initProductLightbox();
   initI18n();
+  initModeModal();
 });
 
 // Fallback: rerun init after load in case DOMContentLoaded was late
 window.addEventListener("load", () => {
   initProgramSlider();
   initProductLightbox();
+  initModeModal();
 });
