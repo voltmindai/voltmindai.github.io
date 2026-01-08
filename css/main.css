@@ -147,6 +147,7 @@ a { color: inherit; text-decoration: none; }
   mask-image: radial-gradient(95% 95% at 50% 50%, #000 70%, transparent 100%);
   -webkit-mask-image: radial-gradient(95% 95% at 50% 50%, #000 70%, transparent 100%);
 }
+.product-stage img { cursor: pointer; }
 .product-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: start; }
@@ -193,6 +194,7 @@ a { color: inherit; text-decoration: none; }
 }
 .slide { min-width: 100%; padding: 6px; box-sizing: border-box; }
 .slide img { width: 100%; border-radius: 10px; display: block; }
+.slide img { cursor: pointer; }
 .slider-btn {
   position: absolute;
   top: 50%;
