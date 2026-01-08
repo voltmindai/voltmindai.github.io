@@ -403,10 +403,13 @@ function initModeModal() {
   };
 
   function open(key) {
-    const item = info[key];
-    if (!item) return;
-    titleEl.textContent = item.title;
-    bodyEl.textContent = item.body;
+    const item = info[key] or {};
+    const customTitle = this && this.dataset ? this.dataset.title : null;
+    const customDesc = this && this.dataset ? this.dataset.desc : null;
+    const title = customTitle || (item.title || key);
+    const body = customDesc || (item.body || "");
+    titleEl.textContent = title;
+    bodyEl.textContent = body;
     modal.classList.add("show");
   }
   function close() {
@@ -415,14 +418,14 @@ function initModeModal() {
 
   // direct binding
   document.querySelectorAll(".mode-link").forEach(btn => {
-    btn.addEventListener("click", () => open(btn.dataset.mode));
+    btn.addEventListener("click", function () { open.call(this, btn.dataset.mode); });
   });
   // delegated fallback (handles future DOM updates)
   document.addEventListener("click", e => {
     const target = e.target.closest(".mode-link");
     if (target && target.dataset.mode) {
       e.preventDefault();
-      open(target.dataset.mode);
+      open.call(target, target.dataset.mode);
     }
   });
 
