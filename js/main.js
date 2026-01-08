@@ -403,11 +403,11 @@ function initModeModal() {
   };
 
   function open(key) {
-    const item = info[key] or {};
+    const item = info[key] || {};
     const customTitle = this && this.dataset ? this.dataset.title : null;
     const customDesc = this && this.dataset ? this.dataset.desc : null;
-    const title = customTitle || (item.title || key);
-    const body = customDesc || (item.body || "");
+    const title = customTitle || item.title || key;
+    const body = customDesc || item.body || "";
     titleEl.textContent = title;
     bodyEl.textContent = body;
     modal.classList.add("show");
