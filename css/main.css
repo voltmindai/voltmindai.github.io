@@ -333,9 +333,11 @@ a { color: inherit; text-decoration: none; }
 .tile-label { color: var(--muted); margin: 0; }
 .tile-value { margin: 4px 0; font-size: 22px; font-weight: 800; }
 .tile-note { margin: 0; color: var(--muted); font-size: 13px; }
-.live-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 220px)); justify-content: flex-start; gap: 10px; margin-top: 14px; }
-.video-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 8px; display: grid; gap: 6px; box-shadow: var(--shadow); max-width: 220px; }
-.video-frame { position: relative; padding-top: 56%; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.live-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 180px)); justify-content: flex-start; gap: 10px; margin-top: 12px; }
+.video-card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 6px; display: grid; gap: 6px; box-shadow: var(--shadow); max-width: 180px; }
+.video-frame { position: relative; padding-top: 56%; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.video-copy h4 { margin: 2px 0; font-size: 14px; }
+.video-copy p { margin: 0; color: var(--muted); font-size: 12px; }
 .video-frame video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .video-copy h4 { margin: 4px 0; }
 .video-copy p { margin: 0; color: var(--muted); }
