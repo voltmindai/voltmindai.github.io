@@ -144,6 +144,7 @@ a { color: inherit; text-decoration: none; }
 }
 .buy-controls label { color: var(--muted); font-size: 13px; }
 .product-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.product-gallery-header { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; color: var(--muted); margin-bottom: 6px; }
 .product-stage {
   position: relative;
   background: radial-gradient(140% 120% at 50% 20%, rgba(79,225,193,0.15), rgba(12,15,21,0.9)),
