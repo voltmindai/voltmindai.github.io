@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VoltMind Energy Automation</title>
+  <link rel="icon" href="static/voltmind-logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -38,17 +39,17 @@
 
   <section class="hero reveal" id="overview">
     <div class="hero-copy">
-      <p class="eyebrow" data-i18n="hero-eyebrow">Grid-Aware Energy Automation</p>
-      <h1 data-i18n="hero-title">Smarter power control for resilient sites.</h1>
-      <p class="lede" data-i18n="hero-lede">Real-time visibility, safe automation, and AI-assisted decisions that keep your energy system stable and efficient.</p>
+      <p class="eyebrow" data-i18n="hero-eyebrow">Your Site’s Intelligent Energy Brain</p>
+      <h1 data-i18n="hero-title">AI that keeps your power stable, efficient, and future-ready.</h1>
+      <p class="lede" data-i18n="hero-lede">Real-time visibility, AI-driven automation, and adaptive decisions that keep your energy system steady without manual tuning.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#demo" data-i18n="btn-view-demo">View Live Demo</a>
         <a class="btn ghost" href="#features" data-i18n="btn-see-capabilities">See Capabilities</a>
       </div>
       <div class="trust">
-        <span class="dot"></span> Continuous monitoring
-        <span class="dot"></span> Automated safety
-        <span class="dot"></span> Fast deployment
+        <span class="dot"></span> AI learns your load patterns
+        <span class="dot"></span> Auto-adjusts to price & weather
+        <span class="dot"></span> Safety-first intelligence
       </div>
     </div>
     <div class="hero-visual">
@@ -95,14 +96,15 @@
     <div class="product-copy">
       <p class="label" data-i18n="product-label">VoltMind AI 5000</p>
       <h2 data-i18n="product-title">Purpose-built for resilient energy sites</h2>
-      <p class="subtext" data-i18n="product-subtext-1">A compact controller that ships with live monitoring, safe automation, and zero-setup dashboards. Built for fast rollout and always-on reliability.</p>
+      <p class="subtext" data-i18n="product-subtext-1">A compact AI controller that ships with live monitoring, self-learning automation, and zero-setup dashboards. Your site’s intelligent energy brain — always learning, always optimizing, always safe.</p>
       <div class="product-pills">
-        <span class="badge">Plug-and-play</span>
-        <span class="badge">Safe automation</span>
-        <span class="badge">Live insights</span>
+        <span class="badge">🧠 AI Brain</span>
+        <span class="badge">🔄 Self-learning</span>
+        <span class="badge">🛡️ Safe automation</span>
       </div>
       <ul class="product-list">
-        <li>Drop-in setup: ship, power on, and get live charts without manual config.</li>
+        <li>AI Brain: Learns your site’s load patterns and adjusts power automatically — no manual tuning needed.</li>
+        <li>Simple web configure: plug in, browse to the unit, and finish the guided setup in minutes.</li>
         <li>Safety-first: auto modes with hard stop protections on shutdown.</li>
         <li>Operational clarity: AI log stream plus real-time tiles for the team.</li>
       </ul>
@@ -127,9 +129,9 @@
 
   <section class="section programs reveal" id="programs">
     <div class="program-copy">
-      <p class="label" data-i18n="programs-label">Control programs</p>
-      <h2 data-i18n="programs-title">Program lineup (7 presets)</h2>
-      <p class="subtext" data-i18n="programs-subtext">Charge / discharge presets with built-in guardrails. Slide the screens and click to enlarge.</p>
+      <p class="label" data-i18n="programs-label">AI-Powered Control Programs</p>
+      <h2 data-i18n="programs-title">AI-Powered Control Programs (7 presets)</h2>
+      <p class="subtext" data-i18n="programs-subtext">AI-driven charge/discharge presets with built-in safety guardrails. Each program adapts to real-time price, weather, and load — no manual intervention needed.</p>
 
       <div class="program-columns">
         <div class="program-col">
@@ -138,20 +140,20 @@
             <li><button class="mode-link" data-mode="auto-percent" data-title="AUTO: Percentage mode (%)" data-desc="Hold inverter output to a target percentage; respects export caps and inverter limits.">AUTO: Percentage mode (%)</button></li>
             <li><button class="mode-link" data-mode="target-grid" data-title="Auto: Target grid power (W)" data-desc="Aim for a specific grid import/export power; offsets load to stay near the watt target within limits.">Auto: Target grid power (W)</button></li>
             <li><button class="mode-link" data-mode="manual" data-title="MANUAL: Manual output (W)" data-desc="Operator-set watt command with guardrails; sends immediately but stays within safe bounds.">MANUAL: Manual output (W)</button></li>
-            <li><button class="mode-link" data-mode="ai-dynamic" data-title="AI: Dynamic (price/solar)" data-desc="Adapts discharge to price/solar signals; throttles within inverter/export limits and time windows.">AI: Dynamic (price/solar)</button></li>
+            <li><button class="mode-link" data-mode="ai-dynamic" data-title="AI: Dynamic (price/solar)" data-desc="Adapts discharge to price/solar signals; throttles within inverter/export limits and time windows.">🤖 AI: Dynamic (price/solar)</button></li>
             <li><button class="mode-link" data-mode="off-discharge" data-title="OFF: Disable output" data-desc="Forces discharge to 0 W and holds; safety stops remain active.">OFF: Disable output</button></li>
           </ul>
         </div>
         <div class="program-col">
           <p class="eyebrow small" data-i18n="programs-charge">Charge (3 modes)</p>
           <ul class="mode-list">
-            <li><button class="mode-link" data-mode="ai-charge" data-title="AI: Dynamic (price/solar) – charge" data-desc="Charges when price/solar is favorable; backs off when site load rises to avoid import spikes.">AI: Dynamic (price/solar)</button></li>
+            <li><button class="mode-link" data-mode="ai-charge" data-title="AI: Dynamic (price/solar) – charge" data-desc="Charges when price/solar is favorable; backs off when site load rises to avoid import spikes.">🤖 AI: Dynamic (price/solar)</button></li>
             <li><button class="mode-link" data-mode="time-charge" data-title="TIME: Time-based charge" data-desc="Charges only in scheduled windows; stops at window end or target.">TIME: Time-based charge</button></li>
             <li><button class="mode-link" data-mode="off-charge" data-title="OFF: No charge" data-desc="Disables charge; keeps safety protections active.">OFF: No charge</button></li>
           </ul>
         </div>
       </div>
-      <p class="microcopy" data-i18n="programs-microcopy">Each preset respects inverter limits, export rules, and time windows; safety stops stay active.</p>
+      <p class="microcopy" data-i18n="programs-microcopy">Each AI preset respects inverter limits, export rules, and time windows — while continuously learning to optimize cost and efficiency.</p>
     </div>
 
     <div class="program-visual lift">
@@ -228,28 +230,32 @@
     <h2 data-i18n="features-title">Built for reliable, safe energy control</h2>
     <div class="feature-grid">
       <div>
-        <h4 data-i18n="feat-1-title">Live dashboards</h4>
-        <p data-i18n="feat-1-body">Curated panels for power, energy, and device health with no manual setup.</p>
+        <h4 data-i18n="feat-1-title">AI Decision Engine</h4>
+        <p data-i18n="feat-1-body">Learns from historical data and real-time signals to make optimal charge/discharge decisions — no human intervention required.</p>
       </div>
       <div>
-        <h4 data-i18n="feat-2-title">Auto control with safety</h4>
-        <p data-i18n="feat-2-body">Adjusts power automatically while respecting export limits and device constraints.</p>
+        <h4 data-i18n="feat-2-title">Live dashboards</h4>
+        <p data-i18n="feat-2-body">Curated panels for power, energy, and device health with no manual setup.</p>
       </div>
       <div>
-        <h4 data-i18n="feat-3-title">Alerts & logging</h4>
-        <p data-i18n="feat-3-body">AI log stream plus guardrail alerts for fast incident response.</p>
+        <h4 data-i18n="feat-3-title">Auto control with safety</h4>
+        <p data-i18n="feat-3-body">Adjusts power automatically while respecting export limits and device constraints.</p>
       </div>
       <div>
-        <h4 data-i18n="feat-4-title">Map & multi-device</h4>
-        <p data-i18n="feat-4-body">Site-aware views with flexible device groups and persistent map settings.</p>
+        <h4 data-i18n="feat-4-title">Alerts & logging</h4>
+        <p data-i18n="feat-4-body">AI log stream plus guardrail alerts for fast incident response.</p>
       </div>
       <div>
-        <h4 data-i18n="feat-5-title">Fast rollout</h4>
-        <p data-i18n="feat-5-body">Provisioning scripts that ship dashboards, datasources, and runtime config.</p>
+        <h4 data-i18n="feat-5-title">Map & multi-device</h4>
+        <p data-i18n="feat-5-body">Site-aware views with flexible device groups and persistent map settings.</p>
       </div>
       <div>
-        <h4 data-i18n="feat-6-title">Secure by design</h4>
-        <p data-i18n="feat-6-body">Least-privilege tokens for data, no control exposed on public pages.</p>
+        <h4 data-i18n="feat-6-title">Fast rollout</h4>
+        <p data-i18n="feat-6-body">Provisioning scripts that ship dashboards, datasources, and runtime config.</p>
+      </div>
+      <div>
+        <h4 data-i18n="feat-7-title">Secure by design</h4>
+        <p data-i18n="feat-7-body">Least-privilege tokens for data, no control exposed on public pages.</p>
       </div>
     </div>
   </section>
