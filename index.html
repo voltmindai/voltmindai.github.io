@@ -130,26 +130,26 @@
   <section class="section programs reveal" id="programs">
     <div class="program-copy">
       <p class="label" data-i18n="programs-label">AI-Powered Control Programs</p>
-      <h2 data-i18n="programs-title">AI-Powered Control Programs (7 presets)</h2>
+      <h2 data-i18n="programs-title">AI-Powered Control Programs (8 presets)</h2>
       <p class="subtext" data-i18n="programs-subtext">AI-driven charge/discharge presets with built-in safety guardrails. Each program adapts to real-time price, weather, and load — no manual intervention needed.</p>
 
       <div class="program-columns">
         <div class="program-col">
-          <p class="eyebrow small" data-i18n="programs-discharge">Discharge (5 modes)</p>
+          <p class="eyebrow small" data-i18n="programs-discharge">⚡ DISCHARGE (5 MODES) — Optimize Energy Use & Reduce Costs</p>
           <ul class="mode-list">
-            <li><button class="mode-link" data-mode="auto-percent" data-title="AUTO: Percentage mode (%)" data-desc="Hold inverter output to a target percentage; respects export caps and inverter limits.">AUTO: Percentage mode (%)</button></li>
-            <li><button class="mode-link" data-mode="target-grid" data-title="Auto: Target grid power (W)" data-desc="Aim for a specific grid import/export power; offsets load to stay near the watt target within limits.">Auto: Target grid power (W)</button></li>
-            <li><button class="mode-link" data-mode="manual" data-title="MANUAL: Manual output (W)" data-desc="Operator-set watt command with guardrails; sends immediately but stays within safe bounds.">MANUAL: Manual output (W)</button></li>
-            <li><button class="mode-link" data-mode="ai-dynamic" data-title="AI: Dynamic (price/solar)" data-desc="Adapts discharge to price/solar signals; throttles within inverter/export limits and time windows.">🤖 AI: Dynamic (price/solar)</button></li>
-            <li><button class="mode-link" data-mode="off-discharge" data-title="OFF: Disable output" data-desc="Forces discharge to 0 W and holds; safety stops remain active.">OFF: Disable output</button></li>
+            <li><button class="mode-link" data-mode="auto-percent" data-title="AUTO: Percentage mode (%)" data-desc="Automatically discharges a fixed percentage of battery capacity during peak hours — ideal for predictable loads.">AUTO: Percentage mode (%)</button></li>
+            <li><button class="mode-link" data-mode="target-grid" data-title="Auto: Target grid power (W)" data-desc="Discharges to maintain a specific grid import level; AI adjusts output dynamically as load shifts.">Auto: Target grid power (W)</button></li>
+            <li><button class="mode-link" data-mode="manual" data-title="MANUAL: Manual output (W)" data-desc="Set a fixed discharge power (e.g., 50kW) for full control — great for tests or events.">MANUAL: Manual output (W)</button></li>
+            <li><button class="mode-link" data-mode="ai-dynamic" data-title="🤖 AI: Dynamic (price/solar)" data-desc="AI analyzes real-time price and solar to discharge only when most cost-effective.">🤖 AI: Dynamic (price/solar)</button></li>
+            <li><button class="mode-link" data-mode="off-discharge" data-title="OFF: No Discharge" data-desc="Safely disables all discharge while guardrails stay active to prevent over-discharge.">OFF: No Discharge</button></li>
           </ul>
         </div>
         <div class="program-col">
-          <p class="eyebrow small" data-i18n="programs-charge">Charge (3 modes)</p>
+          <p class="eyebrow small" data-i18n="programs-charge">🔋 CHARGE (3 MODES) — Replenish Battery Smartly</p>
           <ul class="mode-list">
-            <li><button class="mode-link" data-mode="ai-charge" data-title="AI: Dynamic (price/solar) – charge" data-desc="Charges when price/solar is favorable; backs off when site load rises to avoid import spikes.">🤖 AI: Dynamic (price/solar)</button></li>
-            <li><button class="mode-link" data-mode="time-charge" data-title="TIME: Time-based charge" data-desc="Charges only in scheduled windows; stops at window end or target.">TIME: Time-based charge</button></li>
-            <li><button class="mode-link" data-mode="off-charge" data-title="OFF: No charge" data-desc="Disables charge; keeps safety protections active.">OFF: No charge</button></li>
+            <li><button class="mode-link" data-mode="ai-charge" data-title="🤖 AI: Dynamic (price/solar) – charge" data-desc="Charges when electricity is cheapest and/or solar is highest; backs off as site load rises.">🤖 AI: Dynamic (price/solar)</button></li>
+            <li><button class="mode-link" data-mode="time-charge" data-title="TIME: Time-based charge" data-desc="Schedule charging in off-peak windows (e.g., 00:00–06:00) for predictable savings.">TIME: Time-based charge</button></li>
+            <li><button class="mode-link" data-mode="off-charge" data-title="OFF: No charge" data-desc="Disables charging; battery stays as-is until you re-enable charging.">OFF: No charge</button></li>
           </ul>
         </div>
       </div>

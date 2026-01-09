@@ -250,10 +250,10 @@ function initI18n() {
       "product-subtext-2": "Simple web configure: plug a network cable into VoltMind AI 5000, open your assigned IP in a browser, and finish the guided setup in minutes.",
       "product-subtext-3": "Not seeing your device? We support custom integration. VoltMind AI works with most industrial devices via RS485 — including Schneider Electric, ABB, Siemens, Eaton, Delta, Fronius, GoodWe, Solis, Ginlong, Huawei, Growatt, Deye, SMA, Kaco, Sungrow, and more. Share your RS485 protocol guide — we’ll configure it for you.",
       "programs-label": "AI-Powered Control Programs",
-      "programs-title": "AI-Powered Control Programs (7 presets)",
+      "programs-title": "AI-Powered Control Programs (8 presets)",
       "programs-subtext": "AI-driven charge/discharge presets with built-in safety guardrails. Each program adapts to real-time price, weather, and load — no manual intervention needed.",
-      "programs-discharge": "Discharge (5 modes)",
-      "programs-charge": "Charge (3 modes)",
+      "programs-discharge": "⚡ DISCHARGE (5 MODES) — Optimize Energy Use & Reduce Costs",
+      "programs-charge": "🔋 CHARGE (3 MODES) — Replenish Battery Smartly",
       "programs-microcopy": "Each AI preset respects inverter limits, export rules, and time windows — while continuously learning to optimize cost and efficiency.",
       "live-label": "Live View",
       "live-title": "Operational status at a glance",
@@ -307,10 +307,10 @@ function initI18n() {
       "product-subtext-2": "簡易 Web 設定：插上網線，打開瀏覽器進入指派 IP，跟著引導幾分鐘完成設定。",
       "product-subtext-3": "找不到您的設備？我們支持 RS485 自訂整合：Schneider、ABB、Siemens、Eaton、Delta、Fronius、GoodWe、Solis、Ginlong、Huawei、Growatt、Deye、SMA、Kaco、Sungrow 等。提供協議手冊，我們替您配置。",
       "programs-label": "AI 控制方案",
-      "programs-title": "AI 控制方案（7 組預設）",
+      "programs-title": "AI 控制方案（8 組預設）",
       "programs-subtext": "AI 驅動的充放電預設，內建安全護欄。依即時電價、天氣與負載自動調整，無需人工介入。",
-      "programs-discharge": "放電（5 模式）",
-      "programs-charge": "充電（3 模式）",
+      "programs-discharge": "⚡ 放電（5 模式）— 最佳化用電並降低成本",
+      "programs-charge": "🔋 充電（3 模式）— 聰明補能",
       "programs-microcopy": "每個 AI 模式都遵守逆變器限制、出口規則與時間窗，並持續學習以優化成本與效率。",
       "live-label": "即時視圖",
       "live-title": "一眼掌握營運狀態",
@@ -374,35 +374,35 @@ function initModeModal() {
   const info = {
     "auto-percent": {
       title: "AUTO: Percentage mode (%)",
-      body: "Hold inverter output to a target percentage with safety limits; respects export caps and inverter constraints."
+      body: "Automatically discharges a fixed percentage of battery capacity during peak hours — ideal for predictable load patterns. Set your target % and AI handles the rest."
     },
     "target-grid": {
       title: "Auto: Target grid power (W)",
-      body: "Aim for a specific grid import/export power; offsets load to stay near the watt setpoint while honoring limits."
+      body: "Discharges to maintain a specific grid import level. Perfect when you want to cap utility draw; AI adjusts output dynamically as load changes."
     },
     "manual": {
       title: "MANUAL: Manual output (W)",
-      body: "Operator-set watt command with guardrails; sends immediate output while staying within safe bounds."
+      body: "Set a fixed discharge power (e.g., 50kW) for full control. Ideal for testing, maintenance, or events where you need precise output."
     },
     "ai-dynamic": {
-      title: "AI: Dynamic (price/solar)",
-      body: "Adapts output based on price/solar signals; throttles within inverter/export limits and time windows."
+      title: "🤖 AI: Dynamic (price/solar)",
+      body: "The smartest mode — AI analyzes real-time electricity price and solar forecast to decide when to discharge, aiming for the best cost savings."
     },
     "off-discharge": {
-      title: "OFF: Disable output",
-      body: "Forces discharge to 0 W and holds; safety stops remain active."
+      title: "OFF: No Discharge",
+      body: "Safely disables all discharge. Useful for maintenance or preserving battery; safety rules stay active to prevent over-discharge."
     },
     "ai-charge": {
-      title: "AI: Dynamic (price/solar) – charge",
-      body: "Charges when price/solar favorable; backs off when conditions degrade to avoid import spikes."
+      title: "🤖 AI: Dynamic (price/solar) – charge",
+      body: "Charges when electricity is cheapest and/or solar is highest. AI learns your site and backs off when load rises to avoid spikes."
     },
     "time-charge": {
       title: "TIME: Time-based charge",
-      body: "Charges only in scheduled windows; stops at window end or target."
+      body: "Schedule charging in off-peak windows (e.g., 00:00–06:00). Simple and reliable for fixed tariffs or TOU pricing."
     },
     "off-charge": {
       title: "OFF: No charge",
-      body: "Disables charge; keeps safety protections active."
+      body: "Disables charging; battery stays as-is until you re-enable. Useful for maintenance or avoiding grid draw."
     }
   };
 
