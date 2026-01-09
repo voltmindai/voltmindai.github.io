@@ -446,6 +446,7 @@ window.addEventListener("DOMContentLoaded", () => {
   initProductLightbox();
   initI18n();
   initModeModal();
+  initLiveVideos();
 });
 
 // Fallback: rerun init after load in case DOMContentLoaded was late
@@ -454,3 +455,17 @@ window.addEventListener("load", () => {
   initProductLightbox();
   initModeModal();
 });
+
+function initLiveVideos() {
+  document.querySelectorAll(".live-videos video").forEach(v => {
+    v.playbackRate = 2.0;
+    v.muted = true;
+    v.loop = true;
+    v.autoplay = true;
+    v.playsInline = true;
+    // restart if paused by browser policy
+    const ensurePlay = () => v.paused && v.play().catch(() => {});
+    v.addEventListener("pause", ensurePlay);
+    ensurePlay();
+  });
+}
