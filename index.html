@@ -354,5 +354,31 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+<div class="buy-box lift">
+  <div>
+    <p class="label" data-i18n="buy-label">Buy VoltMind AI 5000</p>
+    <p class="subtext" data-i18n="buy-note">Order now; secure checkout arrives next version. We’ll confirm your order manually.</p>
+    <p class="price" id="price-usd">USD $850 (preorder)</p>
+    <p class="price" id="price-rmb" style="display:none;">RMB ¥8,000 (预购)</p>
+  </div>
+  <div class="buy-controls">
+    <label for="qty" class="muted" data-i18n="buy-qty-label">Quantity</label>
+    <input id="qty" type="number" min="1" value="1" aria-label="Quantity">
+    <button class="btn primary" onclick="openCheckout()">Preorder now</button>
+  </div>
+</div>
+
+<script>
+function openCheckout() {
+  const lang = document.documentElement.lang;
+  if (lang === 'zh-CN') {
+    window.open('https://buy.stripe.com/your-chinese-checkout-link', '_blank');
+  } else {
+    window.open('https://buy.stripe.com/your-english-checkout-link', '_blank');
+  }
+}
+</script>
+
 </body>
 </html>
