@@ -12,12 +12,12 @@ const sample = {
 // Stripe Payment Links (replace placeholders with your live links)
 const stripeLinks = {
   en: {
-    hardware: "https://buy.stripe.com/placeholder-hw-usd",
-    software: "https://buy.stripe.com/placeholder-sw-usd"
+    hardware: "https://buy.stripe.com/eVq00d2vH4HDfmi9Chffy00",
+    software: "https://buy.stripe.com/3cI7sF8U5eid0ro15Lffy01"
   },
   zh: {
-    hardware: "https://buy.stripe.com/placeholder-hw-rmb",
-    software: "https://buy.stripe.com/placeholder-sw-rmb"
+    hardware: "#",
+    software: "#"
   }
 };
 
