@@ -140,13 +140,21 @@
     <div class="buy-box lift">
       <div>
         <p class="label" data-i18n="buy-label">Buy VoltMind AI 5000</p>
-        <p class="subtext" data-i18n="buy-note">Order now; secure checkout arrives next version. We’ll confirm your order manually.</p>
-        <p class="price" data-i18n="buy-price">USD $500 (preorder)</p>
+        <p class="subtext" data-i18n="buy-note">Order hardware plus software & remote support.</p>
       </div>
-      <div class="buy-controls">
-        <label for="qty" class="muted" data-i18n="buy-qty-label">Quantity</label>
-        <input id="qty" type="number" min="1" value="1" aria-label="Quantity">
-        <button class="btn primary" data-i18n="buy-cta">Preorder now</button>
+      <div class="price-lines">
+        <div class="price-row">
+          <span data-i18n="buy-hw-label">Hardware controller</span>
+          <span class="price" id="price-hw" data-i18n="buy-hw-price">USD $500</span>
+        </div>
+        <div class="price-row">
+          <span data-i18n="buy-sw-label">Software license + 1 year remote support</span>
+          <span class="price" id="price-sw" data-i18n="buy-sw-price">USD $300</span>
+        </div>
+      </div>
+      <div class="buy-actions">
+        <a class="btn primary" id="btn-buy-hw" data-i18n="buy-btn-hw" href="#" target="_blank" rel="noopener">Buy Hardware</a>
+        <a class="btn ghost" id="btn-buy-sw" data-i18n="buy-btn-sw" href="#" target="_blank" rel="noopener">Buy Software + Support</a>
       </div>
     </div>
   </section>

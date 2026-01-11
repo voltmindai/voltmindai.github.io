@@ -9,6 +9,18 @@ const sample = {
   ]
 };
 
+// Stripe Payment Links (replace placeholders with your live links)
+const stripeLinks = {
+  en: {
+    hardware: "https://buy.stripe.com/placeholder-hw-usd",
+    software: "https://buy.stripe.com/placeholder-sw-usd"
+  },
+  zh: {
+    hardware: "https://buy.stripe.com/placeholder-hw-rmb",
+    software: "https://buy.stripe.com/placeholder-sw-rmb"
+  }
+};
+
 function initSampleData() {
   const now = Date.now();
   for (let i = 0; i < 40; i++) {
@@ -257,10 +269,13 @@ function initI18n() {
       "product-bullet-6": "Open-source architecture: customize, extend, or integrate with your stack.",
       "product-bullet-7": "Works in China & overseas: no blocked services, no public IP required.",
       "buy-label": "Buy VoltMind AI 5000",
-      "buy-note": "Order now; secure checkout arrives next version (separate EN/CN payment). We’ll confirm your order manually.",
-      "buy-price": "USD $500 (preorder)",
-      "buy-qty-label": "Quantity",
-      "buy-cta": "Preorder now",
+      "buy-note": "Order hardware plus software & remote support. Separate EN/CN checkout.",
+      "buy-hw-label": "Hardware controller",
+      "buy-sw-label": "Software license + 1 year remote support",
+      "buy-hw-price": "USD $500",
+      "buy-sw-price": "USD $300",
+      "buy-btn-hw": "Buy Hardware",
+      "buy-btn-sw": "Buy Software + Support",
       "programs-label": "AI-Powered Control Programs",
       "programs-title": "AI-Powered Control Programs (8 presets)",
       "programs-subtext": "AI-driven charge/discharge presets with built-in safety guardrails. Each program adapts to real-time price, weather, and load — no manual intervention needed.",
@@ -337,10 +352,13 @@ function initI18n() {
       "product-bullet-6": "開源架構：可客製、可擴充、可整合到您的系統。",
       "product-bullet-7": "中國與海外皆可用：無需公共 IP，無被封鎖服務。",
       "buy-label": "購買 VoltMind AI 5000",
-      "buy-note": "立即下單；英/中文將於下一版提供獨立支付通道，我們會人工確認訂單。",
-      "buy-price": "RMB ¥5000（預購）",
-      "buy-qty-label": "數量",
-      "buy-cta": "立即預購",
+      "buy-note": "購買硬體與軟體＋一年遠端支援，英/中文獨立結帳。",
+      "buy-hw-label": "硬體控制器",
+      "buy-sw-label": "軟體授權＋一年遠端支援",
+      "buy-hw-price": "RMB ¥5000",
+      "buy-sw-price": "RMB ¥3000",
+      "buy-btn-hw": "購買硬體",
+      "buy-btn-sw": "購買軟體＋支援",
       "programs-label": "AI 控制方案",
       "programs-title": "AI 控制方案（8 組預設）",
       "programs-subtext": "AI 驅動的充放電預設，內建安全護欄。依即時電價、天氣與負載自動調整，無需人工介入。",
@@ -397,6 +415,7 @@ function initI18n() {
       const key = node.getAttribute("data-i18n");
       if (map[key]) node.textContent = map[key];
     });
+    applyPricing(lang, map);
     toggle.textContent = lang === "en" ? "中文" : "EN";
     document.documentElement.setAttribute("lang", lang === "en" ? "en" : "zh-Hant");
   }
@@ -407,6 +426,18 @@ function initI18n() {
     current = current === "en" ? "zh" : "en";
     setLang(current);
   });
+}
+
+function applyPricing(lang, map) {
+  const hwPrice = document.getElementById("price-hw");
+  const swPrice = document.getElementById("price-sw");
+  const btnHw = document.getElementById("btn-buy-hw");
+  const btnSw = document.getElementById("btn-buy-sw");
+  if (hwPrice && map["buy-hw-price"]) hwPrice.textContent = map["buy-hw-price"];
+  if (swPrice && map["buy-sw-price"]) swPrice.textContent = map["buy-sw-price"];
+  const links = stripeLinks[lang] || {};
+  if (btnHw) btnHw.href = links.hardware || "#";
+  if (btnSw) btnSw.href = links.software || "#";
 }
 
 function initModeModal() {
