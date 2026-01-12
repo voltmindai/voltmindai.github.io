@@ -16,8 +16,8 @@ const stripeLinks = {
     software: "https://buy.stripe.com/3cI7sF8U5eid0ro15Lffy01"
   },
   zh: {
-    hardware: "#",
-    software: "#"
+    hardware: "https://buy.stripe.com/eVq00d2vH4HDfmi9Chffy00",
+    software: "https://buy.stripe.com/3cI7sF8U5eid0ro15Lffy01"
   }
 };
 
@@ -109,6 +109,7 @@ function updateTiles(latest) {
 
 function renderQuickStats() {
   const list = document.getElementById("quick-stats");
+  if (!list) return;
   list.innerHTML = "";
   sample.quick.forEach(item => {
     const li = document.createElement("li");
@@ -247,15 +248,14 @@ function initI18n() {
       "nav-programs": "Programs",
       "nav-live": "Live View",
       "nav-features": "Features",
-      "nav-demo": "Demo",
       "nav-contact": "Contact",
-      "cta-book-demo": "Book a Demo",
+      "cta-contact": "Contact Us",
       "hero-eyebrow": "🚀 VoltMind AI 5000 · Open-Source Intelligent Energy Brain",
       "hero-title": "The open-source, self-learning energy controller built for resilient industrial sites.",
       "hero-lede": "Plug in, browse to the assigned IP, finish setup in minutes, and let AI automate charge/discharge safely — no coding, no manual provisioning, works in China and overseas.",
-      "btn-view-demo": "View Live Demo",
+      "btn-buy-now": "Buy Hardware",
       "btn-see-capabilities": "See Capabilities",
-      "btn-talk-sales": "Talk to sales",
+      "btn-talk-sales": "Contact us",
       "product-label": "VoltMind AI 5000",
       "product-title": "The open-source intelligent energy brain for resilient industrial sites",
       "product-subtext-1": "Your site’s self-learning, safety-first energy controller — plug in, go live in minutes. No coding. No manual setup. Just intelligence.",
@@ -269,7 +269,7 @@ function initI18n() {
       "product-bullet-6": "Open-source architecture: customize, extend, or integrate with your stack.",
       "product-bullet-7": "Works in China & overseas: no blocked services, no public IP required.",
       "buy-label": "Buy VoltMind AI 5000",
-      "buy-note": "Order hardware plus software & remote support. Separate EN/CN checkout.",
+      "buy-note": "Order hardware and optionally add software + 1 year remote support (USD pricing).",
       "buy-hw-label": "Hardware controller",
       "buy-sw-label": "Software license + 1 year remote support",
       "buy-hw-price": "USD $500",
@@ -312,16 +312,12 @@ function initI18n() {
       "feat-6-body": "Provisioning scripts that ship dashboards, datasources, and runtime config.",
       "feat-7-title": "Secure by design",
       "feat-7-body": "Least-privilege tokens for data, no control exposed on public pages.",
-      "demo-label": "Live Demo",
-      "demo-title": "See it in action",
-      "demo-subtext": "Watch a live walk-through of the dashboards, automation flows, and safety controls.",
       "cta-label": "Get started",
-      "cta-title": "Ready to explore VoltMind?",
-      "cta-subtext": "Book a live session and we’ll tailor a walkthrough for your site.",
-      "cta-btn-session": "Book a Session",
-      "cta-btn-schedule": "Schedule online",
+      "cta-title": "Talk with us on WeChat",
+      "cta-subtext": "Scan the QR code below to reach us directly on WeChat for pricing, deployment, and integration questions.",
+      "cta-wechat-note": "Add us on WeChat and say hello — we’ll respond shortly.",
       "footer-body": "Reliable energy automation for modern sites.",
-      "footer-note": "Demo view is read-only. Control actions are disabled in this experience."
+      "footer-note": ""
     },
     zh: {
       "brand-sub": "能源監測與控制",
@@ -330,15 +326,14 @@ function initI18n() {
       "nav-programs": "控制方案",
       "nav-live": "即時視圖",
       "nav-features": "功能",
-      "nav-demo": "示範",
       "nav-contact": "聯絡",
-      "cta-book-demo": "預約示範",
+      "cta-contact": "聯絡我們",
       "hero-eyebrow": "🚀 VoltMind AI 5000 · 開源智能能源大腦",
       "hero-title": "為韌性工業場站打造的開源自學能源控制器。",
       "hero-lede": "插電上網，開啟指派 IP，幾分鐘完成設定；AI 自動安全充放電，無需寫程式、無需手動佈署，海外與中國皆可用。",
-      "btn-view-demo": "觀看示範",
+      "btn-buy-now": "購買硬體",
       "btn-see-capabilities": "查看功能",
-      "btn-talk-sales": "聯絡銷售",
+      "btn-talk-sales": "聯絡我們",
       "product-label": "VoltMind AI 5000",
       "product-title": "開源的智能能源大腦，為工業場站而生",
       "product-subtext-1": "自學且安全優先的能源控制器 — 插上電與網路即可，幾分鐘上線。零程式、零手動佈署，直接聰明。",
@@ -352,11 +347,11 @@ function initI18n() {
       "product-bullet-6": "開源架構：可客製、可擴充、可整合到您的系統。",
       "product-bullet-7": "中國與海外皆可用：無需公共 IP，無被封鎖服務。",
       "buy-label": "購買 VoltMind AI 5000",
-      "buy-note": "購買硬體與軟體＋一年遠端支援，英/中文獨立結帳。",
+      "buy-note": "購買硬體並可加購軟體＋一年遠端支援（美元計價）。",
       "buy-hw-label": "硬體控制器",
       "buy-sw-label": "軟體授權＋一年遠端支援",
-      "buy-hw-price": "RMB ¥5000",
-      "buy-sw-price": "RMB ¥3000",
+      "buy-hw-price": "USD $500",
+      "buy-sw-price": "USD $300",
       "buy-btn-hw": "購買硬體",
       "buy-btn-sw": "購買軟體＋支援",
       "programs-label": "AI 控制方案",
@@ -395,16 +390,12 @@ function initI18n() {
       "feat-6-body": "安裝腳本自動配置儀表板、資料源與運行設定。",
       "feat-7-title": "安全設計",
       "feat-7-body": "最小權限資料存取，公開頁面不提供控制。",
-      "demo-label": "示範",
-      "demo-title": "實際體驗",
-      "demo-subtext": "觀看儀表板、自動化與安全流程的現場演示。",
-      "cta-label": "立即開始",
-      "cta-title": "準備好體驗 VoltMind 嗎？",
-      "cta-subtext": "預約專場，我們依您的場站客製導覽。",
-      "cta-btn-session": "預約會談",
-      "cta-btn-schedule": "線上排程",
+      "cta-label": "立即聯絡",
+      "cta-title": "透過 WeChat 與我們聯繫",
+      "cta-subtext": "掃描下方 QR Code，加我們的 WeChat，詢問價格、佈署與整合。",
+      "cta-wechat-note": "在 WeChat 上留言，我們會盡快回覆。",
       "footer-body": "為現代場站提供可靠的能源自動化。",
-      "footer-note": "示範僅供查看，控制功能已停用。"
+      "footer-note": ""
     }
   };
 

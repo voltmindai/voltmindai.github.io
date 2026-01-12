@@ -28,12 +28,11 @@
       <a href="#programs" data-i18n="nav-programs">Programs</a>
       <a href="#live" data-i18n="nav-live">Live View</a>
       <a href="#features" data-i18n="nav-features">Features</a>
-      <a href="#demo" data-i18n="nav-demo">Demo</a>
       <a href="#contact" data-i18n="nav-contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="btn ghost" id="lang-toggle" aria-label="Toggle language">中文</button>
-      <a class="btn primary" href="#contact" data-i18n="cta-book-demo">Book a Demo</a>
+      <a class="btn primary" href="#contact" data-i18n="cta-contact">Contact Us</a>
     </div>
   </header>
 
@@ -43,7 +42,7 @@
       <h1 data-i18n="hero-title">The open-source, self-learning energy controller built for resilient industrial sites.</h1>
       <p class="lede" data-i18n="hero-lede">Plug in, browse to the assigned IP, finish setup in minutes, and let AI automate charge/discharge safely — no coding, no manual provisioning, works in China and overseas.</p>
       <div class="hero-actions">
-        <a class="btn primary" href="#demo" data-i18n="btn-view-demo">View Live Demo</a>
+        <a class="btn primary" href="#buy" data-i18n="btn-buy-now">Buy Hardware</a>
         <a class="btn ghost" href="#product" data-i18n="btn-see-capabilities">See Capabilities</a>
       </div>
       <div class="trust">
@@ -117,8 +116,8 @@
       <p class="subtext" data-i18n="product-subtext-2">Simple setup: plug power + network, open the assigned IP, connect devices, set targets, go live.</p>
       <p class="subtext" data-i18n="product-subtext-3">Don’t see your device? Share your RS485 protocol guide — we’ll configure it for you.</p>
       <div class="product-actions">
-        <a class="btn primary" href="#demo" data-i18n="btn-view-demo">View Live Demo</a>
-        <a class="btn ghost" href="#contact" data-i18n="btn-talk-sales">Talk to sales</a>
+        <a class="btn primary" href="#buy" data-i18n="btn-buy-now">Buy Hardware</a>
+        <a class="btn ghost" href="#contact" data-i18n="btn-talk-sales">Contact us</a>
       </div>
     </div>
     <div class="product-gallery">
@@ -137,10 +136,10 @@
         </div>
       </div>
     </div>
-    <div class="buy-box lift">
+    <div class="buy-box lift" id="buy">
       <div>
         <p class="label" data-i18n="buy-label">Buy VoltMind AI 5000</p>
-        <p class="subtext" data-i18n="buy-note">Order hardware plus software & remote support.</p>
+        <p class="subtext" data-i18n="buy-note">Order hardware and optionally add software + 1 year remote support (USD pricing).</p>
       </div>
       <div class="price-lines">
         <div class="price-row">
@@ -324,41 +323,23 @@
     </div>
   </section>
 
-  <section class="section demo reveal" id="demo">
-    <div class="demo-copy">
-      <p class="label" data-i18n="demo-label">Live Demo</p>
-      <h2 data-i18n="demo-title">See it in action</h2>
-      <p class="subtext" data-i18n="demo-subtext">Watch a live walk-through of the dashboards, automation flows, and safety controls.</p>
-      <div class="badges">
-        <span class="badge">AI logging</span>
-        <span class="badge">Auto mode</span>
-        <span class="badge">Safety shutdown</span>
-      </div>
-    </div>
-    <div class="demo-media">
-      <div class="glass mini-card">
-        <p class="label">Quick stats</p>
-        <ul id="quick-stats"></ul>
-      </div>
-    </div>
-  </section>
-
   <section class="section cta reveal" id="contact">
     <div>
       <p class="label" data-i18n="cta-label">Get started</p>
-      <h2 data-i18n="cta-title">Ready to explore VoltMind?</h2>
-      <p class="subtext" data-i18n="cta-subtext">Book a live session and we’ll tailor a walkthrough for your site.</p>
+      <h2 data-i18n="cta-title">Talk with us on WeChat</h2>
+      <p class="subtext" data-i18n="cta-subtext">Scan the QR code below to reach us directly on WeChat for pricing, deployment, and integration questions.</p>
     </div>
     <div class="cta-actions">
-      <a class="btn primary" href="mailto:sales@example.com" data-i18n="cta-btn-session">Book a Session</a>
-      <a class="btn ghost" href="https://cal.com" target="_blank" rel="noreferrer" data-i18n="cta-btn-schedule">Schedule online</a>
+      <div class="wechat-card lift">
+        <img src="jpg/wechatqrcode.jpg" alt="WeChat QR code" class="wechat-qr">
+        <p class="subtext" data-i18n="cta-wechat-note">Add us on WeChat and say hello — we’ll respond shortly.</p>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="logo">VoltMind</div>
     <p data-i18n="footer-body">Reliable energy automation for modern sites.</p>
-    <p class="footnote" data-i18n="footer-note">Demo view is read-only. Control actions are disabled in this experience.</p>
   </footer>
 
   <script src="js/main.js"></script>
